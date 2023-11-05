@@ -1,0 +1,292 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-blue: hsl(223, 87%, 63%);
+    --clr-lighter-blue: hsl(223, 87%, 70%);
+    --clr-gray: hsl(0, 0%, 59%);
+
+    --clr-red: hsl(354, 100%, 66%);
+
+    --hsl-blue: 223, 87%, 63%;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+}
+
+.subscribe {
+    text-align: center;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.title strong {
+    font-weight: 700;
+}
+
+input,
+button {
+    font-size: 16px;
+    font-weight: inherit;
+    font-family: inherit;
+    border: none;
+}
+
+button {
+    font-weight: 600;
+}
+
+.form.error::after {
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 0.2px;
+}
+
+.social {
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+body {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.centered {
+    display: grid;
+    justify-content: center;
+}
+
+header {
+    margin-top: 86px;
+}
+
+main {
+    margin-top: 48px;
+}
+
+.title {
+    margin: 0;
+    color: var(--clr-gray);
+}
+
+.title strong {
+    color: black;
+}
+
+.subtitle {
+    margin-block: 16px 0;
+}
+
+.form {
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    gap: 16px;
+}
+
+input, button {
+    border-radius: 100vh;
+    padding-block: 18px;
+}
+
+input {
+    flex-grow: 1;
+    padding-inline: 30px;
+
+    border: 1px solid hsl(223, 100%, 88%);
+    color: var(--clr-gray);
+}
+
+.error input {
+    border-color: var(--clr-red);
+}
+
+button {
+    padding-inline: 64px;
+
+    cursor: pointer;
+    box-shadow: 0 5px 10px hsl(var(--hsl-blue), 0.3);
+
+    background-color: var(--clr-blue);
+    color: white;
+}
+
+button:focus,
+button:hover {
+    background-color: var(--clr-lighter-blue);
+}
+
+.form.error::after {
+    content: attr(data-error-message);
+    display: block;
+
+    position: absolute;
+    top: 100%;
+    left: 31px;
+
+    transform: translateY(8px);
+
+    color: var(--clr-red);
+}
+
+section.preview {
+    margin-top: 86px;
+}
+
+img.preview {
+    width: 100%;
+}
+
+footer {
+    margin-top: 66px;
+    padding-bottom: 46px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+}
+
+.social {
+    display: grid;
+    place-content: center;
+
+    height: 31px;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 100vh;
+    border: 1px solid hsl(0, 0%, 90%);
+
+    color: var(--clr-blue);
+}
+
+.social:active,
+.social:hover {
+    border-color: var(--clr-blue);
+    background-color: var(--clr-blue);
+    color: white;
+}
+
+.social * {
+    border: none;
+    transform: scale(0.94) translate(-3%, -3%);
+}
+
+.copyright {
+    margin-block: 26px 0;
+    color: var(--clr-gray);
+}
+
+@media (max-width: 768px) {
+    .title {
+        letter-spacing: -2px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+
+    input, button {
+        font-size: 24px;
+    }
+
+    .form.error::after {
+        font-size: 20px;
+        letter-spacing: 0.2px;
+    }
+
+    .copyright {
+        font-size: 20px;
+    }
+
+    header {
+        margin-top: 172px;
+    }
+
+    img.logo {
+        transform: scale(1.25);
+    }
+
+    main {
+        margin-top: 80px;
+    }
+
+    .subtitle {
+        margin-top: 34px;
+    }
+
+    .form {
+        margin-top: 66px;
+        margin-inline: 40px;
+        flex-direction: column;
+        gap: 21px;
+    }
+
+    .form.error {
+        gap: 83px;
+    }
+
+    .form.error::after {
+        top: 92px;
+        left: 50%;
+        
+        width: 100%;
+
+        transform: translateX(-50%);
+    }
+
+    input, button {
+        padding-block: 24px;
+    }
+
+    input {
+        padding-inline: 63px;
+        border-width: 2px;
+    }
+
+    button {
+        box-shadow: 0 10px 30px hsl(var(--hsl-blue), 0.3);
+    }
+
+    .preview {
+        margin-top: 50px;
+    }
+
+    footer {
+        margin-top: 236px;
+        padding-bottom: 72px;
+    }
+
+    .socials {
+        gap: 25px;
+    }
+
+    .social {
+        height: 62px;
+        border: 2px solid hsl(0, 0%, 90%);
+    }
+
+    .social * {
+        transform: scale(1.6);
+    }
+
+    .copyright {
+        margin-top: 56px;
+    }
+}
